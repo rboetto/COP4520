@@ -1,10 +1,10 @@
-#define NOISY_RUN
+// #define NOISY_RUN
 #ifdef NOISY_RUN
 	#define NOISY_OUTPUT printf("%i) %f %f\n", id, recv_a, recv_b);
 	#define QUIET_OUTPUT
 #else
 	#define NOISY_OUTPUT
-	#define QUIET_OUTPUT printf("%f\n", recv_a. recv_b);
+	#define QUIET_OUTPUT printf("%f\n%f\n", recv_a, recv_b);
 #endif
 
 #include <stdio.h>

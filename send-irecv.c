@@ -46,9 +46,8 @@ int main (int argc, char ** argv) {
 		MPI_Send(&send_b, 1, MPI_DOUBLE, p-1, 0, MPI_COMM_WORLD);
 		MPI_Irecv(&recv_b, 1, MPI_DOUBLE, (id+1)%p, MPI_ANY_TAG, MPI_COMM_WORLD, &request);
 		MPI_Wait(&request, &status);
+		QUIET_OUTPUT;
 	}
-
-	if (!id) QUIET_OUTPUT;
 
 	NOISY_OUTPUT
 
