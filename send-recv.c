@@ -43,7 +43,7 @@ int main (int argc, char ** argv) {
 		QUIET_OUTPUT
 	}
 
-	MPI_Finalize();
-
 	NOISY_OUTPUT
+
+	MPI_Finalize();
 }
